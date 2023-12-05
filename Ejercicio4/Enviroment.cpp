@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Variant.h"
 
-// Método para insertar un nuevo símbolo en el entorno
+// Método para insertar un nuevo símbolo en el entorno2
 void Enviroment::insert(const std::string& name, const Variant& value) {
     auto it = symbolTable.find(name);
     if (it != symbolTable.end()) {
