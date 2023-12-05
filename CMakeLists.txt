@@ -9,5 +9,4 @@ add_executable(Ejercicio1
         Ejercicio1/enviroment.cpp
         Ejercicio1/enviroment.h
         Ejercicio1/variant.h
-        Ejercicio1/variant.cpp
 )
