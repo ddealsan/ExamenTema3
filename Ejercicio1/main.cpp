@@ -11,4 +11,11 @@ int main(){
 
     Variant health = scriptEnviroment.getVariable("playerHealth");
     Variant position = scriptEnviroment.getVariable("playerPosition");
+
+
+    std::cout << "Player Health: " << std::get<int>(health.getValue()) << std::endl;
+    auto pos = std::get<std::pair<double, double>>(position.getValue());
+    std::cout << "Player Position: (" << pos.first << ", " << pos.second << ")" << std::endl;
+
+    return 0;
 }
