@@ -1,11 +1,11 @@
-#include "environment.h"
+#include "enviroment.h"
 #include <iostream>
 
-void Environment::setVariable(const std::string& name, const Variant& value) {
+void Enviroment::setVariable(const std::string& name, const Variant& value) {
     symbolTable[name] = value;
 }
 
-Variant Environment::getVariable(const std::string& name) const {
+Variant Enviroment::getVariable(const std::string& name) const {
     auto it = symbolTable.find(name);
     if (it != symbolTable.end()) {
         return it->second;
