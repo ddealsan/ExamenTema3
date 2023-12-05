@@ -1,4 +1,4 @@
-#include "enviroment.h"
+#include "Enviroment.h"
 #include <iostream>
 
 void Enviroment::setVariable(const std::string& name, const Variant& value) {
