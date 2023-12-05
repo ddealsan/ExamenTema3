@@ -10,3 +10,10 @@ add_executable(Ejercicio1
         Ejercicio1/enviroment.h
         Ejercicio1/variant.h
 )
+
+add_executable(Ejercicio2
+        Ejercicio2/main.cpp
+        Ejercicio2/variant.h
+        Ejercicio2/enviroment.cpp
+        Ejercicio2/enviroment.h
+)
