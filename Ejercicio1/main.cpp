@@ -9,5 +9,6 @@ int main(){
     scriptEnviroment.setVariable("playerHealth", variant(100));
     scriptEnviroment.setVariable("PlayerPosition", Variant(std::make_pair(0.0,0.0)));
 
-
+    Variant health = scriptEnviroment.getVariable("playerHealth");
+    Variant position = scriptEnviroment.getVariable("playerPosition");
 }
