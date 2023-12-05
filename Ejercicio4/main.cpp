@@ -1,5 +1,5 @@
 #include <iostream>
-#include "enviroment.h"
+#include "Enviroment.h"
 
 int main() {
     try {
@@ -29,6 +29,13 @@ int main() {
         // Intentar insertar un símbolo existente
         try {
             enviroment.insert("playerHealth", Variant(150));
+        } catch (const std::runtime_error& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
+        }
+
+        // Intentar acceder a un símbolo no existente
+        try {
+            Variant nonExistentValue = enviroment.getValue("nonExistentSymbol");
         } catch (const std::runtime_error& e) {
             std::cerr << "Error: " << e.what() << std::endl;
         }

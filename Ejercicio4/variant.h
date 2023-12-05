@@ -23,6 +23,7 @@ public:
     std::variant<int, std::pair<double, double>> getValue() const {
         return data;
     }
+    friend bool operator==(const Variant& lhs, const Variant& rhs);
 };
 
 #endif //EXAMENTEMA3_VARIANT_H
