@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Enviroment.h"
 
 int main() {
@@ -5,23 +6,32 @@ int main() {
         // Crear una instancia de Enviroment
         Enviroment enviroment;
 
-        // ... (resto del código)
+        // Insertar símbolos
+        enviroment.insert("playerHealth", Variant(100));
+        enviroment.insert("playerPosition", Variant(std::make_pair(1.0, 2.0)));
 
-        // Ejemplos de uso con manejo de excepciones
+        // Buscar y obtener valores
+        Variant healthValue;
+        if (enviroment.lookup("playerHealth", healthValue)) {
+            std::cout << "Player Health: " << std::get<int>(healthValue.getValue()) << std::endl;
+        } else {
+            std::cerr << "Player Health not found in the environment." << std::endl;
+        }
+
+        Variant positionValue;
+        if (enviroment.lookup("playerPosition", positionValue)) {
+            auto pos = std::get<std::pair<double, double>>(positionValue.getValue());
+            std::cout << "Player Position: (" << pos.first << ", " << pos.second << ")" << std::endl;
+        } else {
+            std::cerr << "Player Position not found in the environment." << std::endl;
+        }
+
+        // Intentar insertar un símbolo existente
         try {
-            Variant retrievedHealth = enviroment.getValue("playerHealth");
-            std::cout << "Player Health: " << std::get<int>(retrievedHealth.getValue()) << std::endl;
+            enviroment.insert("playerHealth", Variant(150));
         } catch (const std::runtime_error& e) {
             std::cerr << "Error: " << e.what() << std::endl;
         }
-
-        try {
-            enviroment.insert("playerHealth", Variant(150)); // Intentar insertar un símbolo existente
-        } catch (const std::runtime_error& e) {
-            std::cerr << "Error: " << e.what() << std::endl;
-        }
-
-        // ... (resto del código)
 
     } catch (const std::exception& e) {
         std::cerr << "Excepción general: " << e.what() << std::endl;

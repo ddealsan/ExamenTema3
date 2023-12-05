@@ -22,7 +22,7 @@ Variant Enviroment::getValue(const std::string& name) const {
     if (it != symbolTable.end()) {
         return it->second;
     }
-    // El símbolo no existe en el entorno
+    // El símbolo no existe en el entorno, lanzar una excepción
     throw std::runtime_error("Intento de acceder a un símbolo no existente.");
 }
 
@@ -33,6 +33,6 @@ bool Enviroment::lookup(const std::string& name, Variant& value) const {
         value = it->second;
         return true;
     }
-    // El símbolo no existe en el entorno
-    return false;
+    // El símbolo no existe en el entorno, lanzar una excepción
+    throw std::runtime_error("Intento de buscar un símbolo no existente.");
 }

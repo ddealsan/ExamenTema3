@@ -24,3 +24,10 @@ add_executable(Ejercicio3
         Ejercicio3/enviroment.cpp
         Ejercicio3/enviroment.h
 )
+
+add_executable(Ejercicio4
+        Ejercicio4/main.cpp
+        Ejercicio4/variant.h
+        Ejercicio4/enviroment.cpp
+        Ejercicio4/enviroment.h
+)
