@@ -1,4 +1,5 @@
 #include "Enviroment.h"
+#include <iostream>
 
 // Método para insertar un nuevo símbolo en el entorno
 void Enviroment::insert(const std::string& name, const Variant& value) {

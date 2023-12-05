@@ -1,8 +1,7 @@
 #ifndef EXAMENTEMA3_ENVIROMENT_H
 #define EXAMENTEMA3_ENVIROMENT_H
 
-#ifndef EXAMENTEMA3_ENVIROMENT_H
-#define EXAMENTEMA3_ENVIROMENT_H
+
 
 #include <map>
 #include <string>
@@ -27,6 +26,6 @@ public:
 
     // Otros métodos y funciones que puedas necesitar en la clase Enviroment
 };
-#endif //EXAMENTEMA3_ENVIROMENT_H
+
 
 #endif //EXAMENTEMA3_ENVIROMENT_H
