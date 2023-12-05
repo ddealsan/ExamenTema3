@@ -20,9 +20,9 @@ public:
     Variant(const std::pair<double, double>& value) : data(value) {}
 
     // Obtener el valor
-    variant<int, std::pair<double, double>> getValue() const {
+    std::variant<int, std::pair<double, double>> getValue() const {
         return data;
     }
 };
 
-#endif //EXAMENTEMA3_VARIANT_H
+#endif //EXAMENTEMA3_VARIANT_HH
