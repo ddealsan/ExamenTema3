@@ -17,3 +17,10 @@ add_executable(Ejercicio2
         Ejercicio2/enviroment.cpp
         Ejercicio2/enviroment.h
 )
+
+add_executable(Ejercicio3
+        Ejercicio3/main.cpp
+        Ejercicio3/variant.h
+        Ejercicio3/enviroment.cpp
+        Ejercicio3/enviroment.h
+)
