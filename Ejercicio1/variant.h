@@ -8,14 +8,21 @@
 
 class Variant {
 public:
-    std::Variant<int, std::pair<double, double>> data;
+    std::variant<int, std::pair<double, double>> data;
 
-    Variant(); // Constructor por defecto
-    Variant(int value); // Constructor para enteros
-    Variant(const std::pair<double, double>& value); // Constructor para pares de double
+    // Constructor por defecto
+    Variant() : data() {}
+
+    // Constructor para enteros
+    Variant(int value) : data(value) {}
+
+    // Constructor para pares de double
+    Variant(const std::pair<double, double>& value) : data(value) {}
 
     // Obtener el valor
-    std::Variant<int, std::pair<double, double>> getValue() const;
+    variant<int, std::pair<double, double>> getValue() const {
+        return data;
+    }
 };
 
 #endif //EXAMENTEMA3_VARIANT_H
